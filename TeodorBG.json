@@ -1,0 +1,3433 @@
+{
+	"cases": [],
+	"suites": [{
+		"id": 1,
+		"title": "Register/Login",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 1,
+			"title": "Login with valid data",
+			"description": "Enter valid username & valid password",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click on the account button",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the \u201c\u0412\u0445\u043e\u0434\u201c button",
+				"expected_result": "Successful login",
+				"data": ""
+			}]
+		}, {
+			"id": 165,
+			"title": "Logout with logout button",
+			"description": "User can logout from the profile from button\u201c\u0418\u0437\u0445\u043e\u0434\u201c",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click account button",
+				"expected_result": "Click account button",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \u201c\u0418\u0437\u0445\u043e\u0434\u201c",
+				"expected_result": "User is logout successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 3,
+			"title": "Login with wrong username",
+			"description": "User cannot be logged with invalid username",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click on the account button",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Insert random username and valid password",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the button \u201c\u0412\u0445\u043e\u0434\u201c",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 166,
+			"title": "Login with back button after logout",
+			"description": "User cannot log in after click the back button of the browser",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click on the account button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u0418\u0437\u0445\u043e\u0434\u201c",
+				"expected_result": "The user is logout",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the Back button of the browser",
+				"expected_result": "User is still logout",
+				"data": ""
+			}]
+		}, {
+			"id": 2,
+			"title": "Login with wrong password",
+			"description": "User cannot be login with invalid password",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the account button",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert valid Email and wrong password",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the button \u201c\u0412\u0445\u043e\u0434\u201c",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 4,
+			"title": "Login with wrong username & wrong password",
+			"description": "User cannot be logged with wrong username & wrong password",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the account button",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert wrong username & wrong password",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on login button \"\u0412\u0445\u043e\u0434\"",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 5,
+			"title": "Login with empty username field",
+			"description": "User cannot be logged with empty username field",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the account button",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the field",
+				"expected_result": "Field is filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the button ''\u0412\u0445\u043e\u0434''",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 6,
+			"title": "Login with empty password field",
+			"description": "User cannot be logget with empty password field",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the account button",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the field",
+				"expected_result": "Field is filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on button ''\u0412\u0445\u043e\u0434'",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 7,
+			"title": "Login with empty fields",
+			"description": "User cannot be logged with empty fields",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the account button",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the button \u201c\u0412\u0445\u043e\u0434\u201c",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 75,
+			"title": "Login with new password",
+			"description": "User can change password and login",
+			"preconditions": "1. Go to : https://teodor.bg/ \n2. User changed the password from the forgotten password",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "other",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the account button",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the button \u201c\u0412\u0445\u043e\u0434\u201c",
+				"expected_result": "User is logged and is in account page",
+				"data": ""
+			}]
+		}, {
+			"id": 76,
+			"title": "Login with Facebook",
+			"description": "User can login with Facebook account",
+			"preconditions": "1. User is already registered in Facebook \n2. Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the account button",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the button \u201c\u0412\u0445\u043e\u0434 \u0441 Facebook''",
+				"expected_result": "User is forwarded on the Facebook page",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Approve the Facebook account",
+				"expected_result": "User is logged and is in account page",
+				"data": ""
+			}]
+		}, {
+			"id": 77,
+			"title": "Login with Google",
+			"description": "User can login with Google account",
+			"preconditions": "1. User is already registered in Google \n2. Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the account button",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the button \u201c\u0412\u0445\u043e\u0434 \u0441 Google\u201c",
+				"expected_result": "The user forwarded on the Google page",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Approve the Google account",
+				"expected_result": "User is logged and is in account page",
+				"data": ""
+			}]
+		}, {
+			"id": 8,
+			"title": "Registration with valid data",
+			"description": "The user can register on the site",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Go to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Enter valid creation",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click ot the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "```\nSuccessfully registered user\n```",
+				"data": ""
+			}]
+		}, {
+			"id": 9,
+			"title": "Registration with wrong username",
+			"description": "User cannot be registration with wrong username",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click ot the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 10,
+			"title": "Registration with wrong last name",
+			"description": "User cannot be registration with wrong last name",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click ot the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 11,
+			"title": "Registration with wrong Email",
+			"description": "User cannot be registered with the wrong Email",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click ot the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 12,
+			"title": "Registration with wrong password",
+			"description": "User cannot be registration with wrong password",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 13,
+			"title": "Registration with wrong confirm password",
+			"description": "User cannot be registration with wrong confirm password",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the button \"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\"",
+				"expected_result": "The user not logged",
+				"data": ""
+			}]
+		}, {
+			"id": 156,
+			"title": "Registration with empty name",
+			"description": "User cannot be registered without inserted name",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the required checkboxes",
+				"expected_result": "Check boxes are checked",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on the button\u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration is unsuccessful and the user is asked to insert a valid Name",
+				"data": ""
+			}]
+		}, {
+			"id": 157,
+			"title": "Registration with empty \u0424\u0430\u043c\u0438\u043b\u0438\u044f",
+			"description": "User cannot be registered witout inserted \"\u0424\u0430\u043c\u0438\u043b\u0438\u044f''",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the required checkboxes",
+				"expected_result": "Check boxes are checked",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the button\u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration is unsuccessful and the user is asked to insert a valid second name \"\u0424\u0430\u043c\u0438\u043b\u0438\u044f''",
+				"data": ""
+			}]
+		}, {
+			"id": 160,
+			"title": "Registration with empty Email field",
+			"description": "User cannot be registered without inserted Email",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the required checkboxes",
+				"expected_result": "Check boxes are checked",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration is unsuccessful and the user is asked to insert a valid Email",
+				"data": ""
+			}]
+		}, {
+			"id": 161,
+			"title": "Registration with empty password field",
+			"description": "User cannot be registered without inserted password",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the required checkboxes",
+				"expected_result": "Check boxes are checked",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration is unsuccessful and the user is asked to insert a valid password",
+				"data": ""
+			}]
+		}, {
+			"id": 164,
+			"title": "Registration with empty fileds",
+			"description": "User cannot be registered without insert any date",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the account icon",
+				"expected_result": "Login page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d to finish registration",
+				"expected_result": "Registration is unsuccessful and user is asked insert to valid data in all fields",
+				"data": ""
+			}]
+		}, {
+			"id": 162,
+			"title": "Registration without checked I'm not a robot",
+			"description": "User cannot be registered without checked I\u2019m not a robot",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Check required checkboxes",
+				"expected_result": "Checkboxes are checked",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration is unsuccessfully and user is notified to check I\u2019m not a robot field",
+				"data": ""
+			}]
+		}, {
+			"id": 158,
+			"title": "Registration without checked required checkbox",
+			"description": "User cannot be registered without checked required checkbox",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration is unsuccessfully and user is notified to check required checkbox field",
+				"data": ""
+			}]
+		}, {
+			"id": 163,
+			"title": "Registration without a confirmed password",
+			"description": "User cannot be registered without a confirmed password",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Navigate to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the required checkboxes",
+				"expected_result": "Check boxes are checked",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d to finish registration",
+				"expected_result": "Registration is unsuccessful and the user is asked to confirm the password",
+				"data": ""
+			}]
+		}, {
+			"id": 159,
+			"title": "Registration only with numbers",
+			"description": "User cannot be registered with name with numbers or specials characters",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Go to https://teodor.bg/customer/account/login/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d on the right site of the window",
+				"expected_result": "Registration page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert only numbers",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the required check boxes",
+				"expected_result": "Check boxes are checked",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on the button \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d",
+				"expected_result": "Registration is unsuccessful and the user is navigate to insert correct Name and Last name",
+				"data": ""
+			}]
+		}, {
+			"id": 183,
+			"title": "Registration with too long name and last name",
+			"description": "The user can\u2019t be registered too long name and last name and field have to be with limit about counts of characters",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click on the account button\n3. Click on the \u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201d button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Insert long Name",
+				"expected_result": "Field is filled",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert long Last name",
+				"expected_result": "Field is filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Insert valid data in other fields",
+				"expected_result": "Field is filled",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on the required checkboxes",
+				"expected_result": "Checkboxes are checked",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Click on the\u201c\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f\u201dbutton",
+				"expected_result": "Registration is unsuccessful and the user is notified to insert name and last name between limits",
+				"data": ""
+			}]
+		}, {
+			"id": 207,
+			"title": "URL from logged profile account forward to login page",
+			"description": "Testing that, when copy URL from logged profile account and paste in the new browser window, it should redirect to login page",
+			"preconditions": "User has to be registered already\n\n1. Go to https://teodor.bg/\n2. Click on the account button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Insert correct inputs in the fields",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the \u201c\u0412\u0445\u043e\u0434\u201c button",
+				"expected_result": "The user is logged and is on the account page",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Copy URL from account profile",
+				"expected_result": "Copying URL is successfully",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Paste the URL in the new incognito browser window",
+				"expected_result": "URL redirected to login form of the site",
+				"data": ""
+			}]
+		}]
+	}, {
+		"id": 2,
+		"title": "Search feature",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 14,
+			"title": "Search feature is available",
+			"description": "User can search products by keyword",
+			"preconditions": "1.Go to https://teodor.bg/ \n2.The user must be logged in",
+			"postconditions": "```\n```",
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on login button",
+				"expected_result": "Search field is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Write \" \u043f\u0430\u043d\u0442\u0430\u043b\u043e\u043d '' in search field",
+				"expected_result": "Search field is filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the Search button",
+				"expected_result": "Page with found products is loaded",
+				"data": ""
+			}]
+		}, {
+			"id": 78,
+			"title": "Auto-complete searching keyword",
+			"description": "The search feature auto-complete keyword after inserting the first 3 letters",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the Search button",
+				"expected_result": "Search field is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert \u201c\u043f\u0430\u043d\u201c",
+				"expected_result": "Search feature auto-completed search hing keyword",
+				"data": ""
+			}]
+		}, {
+			"id": 176,
+			"title": "Search video",
+			"description": "Test that, the user can search videos by keyword",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Click the \u201c\u0412\u0438\u0434\u0435\u043e\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Insert \u201c[\u041a\u043e\u043b\u0435\u043a\u0446\u0438\u044f \u0415\u0441\u0435\u043d-\u0417\u0438\u043c\u0430 2019/2020 - TEODOR](https://teodor.bg/novini/kolektsiya-esen-zima-2019-2020-teodor)\u201c in the search field of the Video page",
+				"expected_result": "There is a result connected with the keyword",
+				"data": ""
+			}]
+		}]
+	}, {
+		"id": 3,
+		"title": "Language",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 73,
+			"title": "Change language in Romanian",
+			"description": "```\nThe user is able to change the language from the drop down menu\n```",
+			"preconditions": "1. Go to https://teodor.bg \n2. The language on the site is Bulgarian",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on language button",
+				"expected_result": "<span style=\"color: rgb(32, 33, 36); font-family: Roboto, arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">The Dropdown Menu is visible</span>",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on ''RO'' button",
+				"expected_result": "The language of site is changed in Romanian",
+				"data": ""
+			}]
+		}, {
+			"id": 79,
+			"title": "Change language in Greek",
+			"description": "User can change the language of the site in Greek",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. The language on the site is Bulgarian",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201cLanguage\u201c",
+				"expected_result": "The Dropdown menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \"GR\"",
+				"expected_result": "The language of site is changed in Greek",
+				"data": ""
+			}]
+		}, {
+			"id": 80,
+			"title": "Change language in Bulgarian",
+			"description": "User can change the language of the site in Bulgarian",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. The language ot the site in Greek",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the button \u201cLanguage\u201c",
+				"expected_result": "The Dropdown Menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button ''BG\"",
+				"expected_result": "The language of the site is changed in Bulgarian",
+				"data": ""
+			}]
+		}]
+	}, {
+		"id": 4,
+		"title": "Cart feature",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 196,
+			"title": "Send Email from Contacts page",
+			"description": "The user can send Emails from contacts page",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click the \u201c\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u0438\u201c button from header",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "undefined",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201cEMAIL \u041f\u041e\u0414\u0414\u0420\u042a\u0416\u041a\u0410: sales@teodor.bg\u201d",
+				"expected_result": "Application for Emails on the computer is open",
+				"data": ""
+			}]
+		}, {
+			"id": 81,
+			"title": "Add product in the favorites list",
+			"description": null,
+			"preconditions": "1. Go to https://teodor.bg/ \n2. Click Account button \n3. Insert valid data for user \n4. Click \u201c\u0412\u0445\u043e\u0434\u201c",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201cH8S\u201c",
+				"expected_result": "Page \u201cH8S\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \u201c\u0414\u043e\u0431\u0430\u0432\u0438\u201c of the first product from the list",
+				"expected_result": "Page of this product is loadd successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Choose color \u201c\u0427\u0435\u0440\u0435\u043d\u201c",
+				"expected_result": "Color is cheched",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on size \u201c\u041c\u201c",
+				"expected_result": "Size is checked",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Click button \u201c\u0414\u043e\u0431\u0430\u0432\u0438 \u0432 \u043b\u044e\u0431\u0438\u043c\u0438\u201c",
+				"expected_result": "Product is added to favorites list",
+				"data": ""
+			}]
+		}, {
+			"id": 82,
+			"title": "Add products to cart from favorites page",
+			"description": "Registered and logged users can add products from the favorites page",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. Click account button \n3. Insert valid data for user \n4. Click \u201c\u0412\u0445\u043e\u0434\u201c \n5. There are products in favorites",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c",
+				"expected_result": "Page is loaded \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click button \u201c\u0414\u043e\u0431\u0430\u0432\u0438 \u0432\u0441\u0438\u0447\u043a\u0438 \u043a\u044a\u043c \u043a\u043e\u043b\u0438\u0447\u043a \u0430\u0442\u0430\u201c",
+				"expected_result": "The products are in the cart",
+				"data": ""
+			}]
+		}, {
+			"id": 212,
+			"title": "Add product in cart \"Guest\"",
+			"description": "Test that guests can add products in the cart without login before that",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Hover to \u201c\u041e\u0431\u0443\u0432\u043a\u0438\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0414\u043e\u0431\u0430\u0432\u0438\u201c button of the first product from the list",
+				"expected_result": "Page of this product is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Choose color \u201cBlack\u201c",
+				"expected_result": "Color is checked",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on size \u201c48\u201c",
+				"expected_result": "Size is checked",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click \u201c\u0414\u043e\u0431\u0430\u0432\u0438 \u0432 \u043f\u043e\u0440\u044a\u0447\u043a\u0430\u201c button",
+				"expected_result": "Product is added to cart",
+				"data": ""
+			}]
+		}, {
+			"id": 83,
+			"title": "Update the list of favorites products",
+			"description": "Registered and logged users can update products in the favorites list",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. Click Account button \n3. Insert valid data for user\n4. Click \u201c\u0412\u0445\u043e\u0434\u201c \n5. There are products in favorites",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c",
+				"expected_result": "Page \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c is loaded",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click \u201c\u0410\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0441\u043f\u0438\u0441\u044a\u043a\u0430 \u0441 \u0436\u0435\u043b\u0430\u043d\u0438 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u201c button",
+				"expected_result": "The list is updated",
+				"data": ""
+			}]
+		}, {
+			"id": 84,
+			"title": "Remove product from the favorites list",
+			"description": "Registered and logged users can remove products from favorites list",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. Click Account button \n3. Insert valid data for user MishoShamara@gmail.com \n4. Click \u201c\u0412\u0445\u043e\u0434\u201c",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201cH8S\u201c button",
+				"expected_result": "Page \u201dH8S\u201d is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \u201c\u0414\u043e\u0431\u0430\u0432\u0438\u201c button of the fir st product from the list",
+				"expected_result": "Page of this product is loaded succes sfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Choose color \u201c\u0427\u0435\u0440\u0435\u043d\u201c",
+				"expected_result": "Color is checked",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on size \u201c\u041c\u201c",
+				"expected_result": "Size is checked",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Click \u201c\u0414\u043e\u0431\u0430\u0432\u0438 \u0432 \u043b\u044e\u0431\u0438\u043c\u0438\u201c button",
+				"expected_result": "Product is added to favorites list",
+				"data": ""
+			}, {
+				"position": 6,
+				"action": "Click the \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c button",
+				"expected_result": "Page \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c is open",
+				"data": ""
+			}, {
+				"position": 7,
+				"action": "Click the \u201c\u041f\u0440\u0435\u043c\u0430\u0445\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u043e\u0434\u0443\u043a \u0442\u201c button",
+				"expected_result": "The product is removed from the fav orites list",
+				"data": ""
+			}]
+		}, {
+			"id": 85,
+			"title": "Share the list with favorites products",
+			"description": "Registered and logged users can share via Email the list with favorites products",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. Click Account button \n3. Insert valid data for user \n4. Click \u201c\u0412\u0445\u043e\u0434\u201c \n5. There are products in favorites",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c button",
+				"expected_result": "Page \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c is loaded",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click \u201c\u0421\u043f\u043e\u0434\u0435\u043b\u0438 \u0441\u043f\u0438\u0441\u044a\u043a \u0441 \u0436\u0435\u043b\u0430\u043d\u0438 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u201c button",
+				"expected_result": "A page for sharing the list is loaded",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Insert Email in the field for mails",
+				"expected_result": "Field is filled",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the \u201c\u0421\u043f\u043e\u0434\u0435\u043b\u0438 \u0441\u043f\u0438\u0441\u044a\u043a \u0441 \u0436\u0435\u043b\u0430\u043d\u0438 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u201c",
+				"expected_result": "The list is shared successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 86,
+			"title": "Show 10 products on one page",
+			"description": "Registered and logged user can filtered visible products in one page in favorites list",
+			"preconditions": "1.Go to https://teodor.bg/ \n2\\. Click Account button \n3\\. Insert valid data for user \n4\\. Click \u201c\u0412\u0445\u043e\u0434\u201c \n5\\. There are 11 or more products in the favorites list",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click \u201c\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u043e 10\u201c button",
+				"expected_result": "There are only 10 products in one page",
+				"data": ""
+			}]
+		}, {
+			"id": 87,
+			"title": "Show 20 products on one page",
+			"description": "Registered and logged user can filtered visible products in one page in favorites list",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. Click Account button \n3. Insert valid data for user \n4. Click \u201c\u0412\u0445\u043e\u0434\u201c \n5. There are 21 or more products in the favorites list",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click \u201c\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u043e 20\u201c button",
+				"expected_result": "There are only 20 products in one page",
+				"data": ""
+			}]
+		}, {
+			"id": 88,
+			"title": "Show 50 products on one page",
+			"description": "Registered and logged user can filtered visible products in one page in favorites list",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. Click Account button \n3. Insert valid data for user\n4. Click \u201c\u0412\u0445\u043e\u0434\u201c \n5. There are 51 or more products in the favorites list",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click \u201c\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u043e 50\u201c button",
+				"expected_result": "There are only 50 products in one page",
+				"data": ""
+			}]
+		}, {
+			"id": 189,
+			"title": "Location of given shop",
+			"description": "The user open page with more information about give shop",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click the \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c button from the header of the site",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0433\u0440\u0430\u0434\u201c button",
+				"expected_result": "The list with all cities is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the \u201c\u041f\u043b\u043e\u0432\u0434\u0438\u0432\u201c button",
+				"expected_result": "All visible shops are in Plovdiv city",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \u201c\u0412\u0438\u0436\u0442\u0435 \u043d\u0430 \u043a\u0430\u0440\u0442\u0430\u0442\u0430\u201c button of the first shop from a list",
+				"expected_result": "Click the \u201c\u0412\u0438\u0436\u0442\u0435 \u043d\u0430 \u043a\u0430\u0440\u0442\u0430\u0442\u0430\u201c button of the first shop from a list",
+				"data": ""
+			}]
+		}, {
+			"id": 200,
+			"title": "Paid delivery after order under 99,99 lv",
+			"description": "Test that the delivery will be free for customers if the order is over 99,99 lv",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Hover to \u201c\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "undefined",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438\u201c button",
+				"expected_result": "The Dropdown Menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \u201c\u041f\u0430\u043f\u0438\u0439\u043e\u043d\u043a\u0438\u201c button",
+				"expected_result": "Page \u201d\u041f\u0430\u043f\u0438\u0439\u043e\u043d\u043a\u0438\u201d is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \u201c\u0414\u043e\u0431\u0430\u0432\u0438\u201c button of the first product which is under 99,99lv",
+				"expected_result": "Page of product is open",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the \u201c\u041a\u043e\u043b\u0438\u0447\u043a\u0430\u201c button",
+				"expected_result": "There is a message about paid delivery",
+				"data": ""
+			}]
+		}, {
+			"id": 202,
+			"title": "Unsuccessfuly adding products to cart without size",
+			"description": "The user cannot add products to the cart without choosing the size before that",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click in \u201c\u041e\u0431\u0443\u0432\u043a\u0438\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0414\u043e\u0431\u0430\u0432\u0438\u201c button of the first product from the list",
+				"expected_result": "Page of this product is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Choose color \u201cGreen\u201c",
+				"expected_result": "Choose color \u201cGreen\u201c",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click \u201c\u0414\u043e\u0431\u0430\u0432\u0438 \u0432 \u043f\u043e\u0440\u044a\u0447\u043a\u0430\u201c button",
+				"expected_result": "System notified the user to choose the size of the product",
+				"data": ""
+			}]
+		}, {
+			"id": 203,
+			"title": "No effect on other product in cart",
+			"description": "The user can remove products from the cart without effects on other products in the cart",
+			"preconditions": "1. Go to https://teodor.bg/\n2. There are two different products in the cart",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201cCart\u201c button from the header",
+				"expected_result": "Page \u201cCart\u201c is loaded",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \u201c+\u201c button of the first one",
+				"expected_result": "The count of products is two",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \u201c\u041f\u0440\u0435\u043c\u0430\u0445\u043d\u0438\u201c button of the product with a count of one",
+				"expected_result": "Product is removed from the cart and the count of other products is still two",
+				"data": ""
+			}]
+		}, {
+			"id": 204,
+			"title": "Order product without name ''Guest''",
+			"description": "Test that guests cannot order some product without adding the name in order info",
+			"preconditions": "1. Go to https://teodor.bg/\n2. There is one product in the cart",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041a\u043e\u043b\u0438\u0447\u043a\u0430\u201c button",
+				"expected_result": "Page \u201c\u041a\u043e\u043b\u0438\u0447\u043a\u0430\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \u201c\u041a\u044a\u043c \u0437\u0430\u0432\u044a\u0440\u0448\u0432\u0430\u043d\u0435\u201c button",
+				"expected_result": "The checkout page is loaded",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Insert info about customer",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the \u201c\u041d\u0430\u043f\u0440\u0435\u0434\u201c button",
+				"expected_result": "The user is notified about the name field that is required",
+				"data": ""
+			}]
+		}, {
+			"id": 205,
+			"title": "Order product without phone number ''Guest''",
+			"description": "Test that guests cannot order some product without adding the phone number in order info",
+			"preconditions": "1. Go to https://teodor.bg/\n2. There is one product in the cart\n3. Click the \u201c\u041a\u043e\u043b\u0438\u0447\u043a\u0430\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "other",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041a\u044a\u043c \u0437\u0430\u0432\u044a\u0440\u0448\u0432\u0430\u043d\u0435\u201c button",
+				"expected_result": "Click the \u201c\u041a\u044a\u043c \u0437\u0430\u0432\u044a\u0440\u0448\u0432\u0430\u043d\u0435\u201c button",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert info about customer",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \u201c\u041d\u0430\u043f\u0440\u0435\u0434\u201c button",
+				"expected_result": "The user is notified about the Phone number field that is required",
+				"data": ""
+			}]
+		}, {
+			"id": 206,
+			"title": "Order product without email \"Guest\"",
+			"description": "Test that guests cannot order some product without adding Email in order info",
+			"preconditions": "1. Go to https://teodor.bg/\n2. There is one product in the cart\n3. Click the \u201c\u041a\u043e\u043b\u0438\u0447\u043a\u0430\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "negative",
+			"type": "other",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041a\u044a\u043c \u0437\u0430\u0432\u044a\u0440\u0448\u0432\u0430\u043d\u0435\u201c button",
+				"expected_result": "The checkout page is loaded",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert info about customer",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \u201c\u041d\u0430\u043f\u0440\u0435\u0434\u201c button",
+				"expected_result": "The user is notified about the Email field that is required",
+				"data": ""
+			}]
+		}, {
+			"id": 197,
+			"title": "Order product",
+			"description": "Test that guests can order products after need actions",
+			"preconditions": "1. Go to https://teodor.bg/\n2. There is one product in the cart\n3. Click the \u201c\u041a\u043e\u043b\u0438\u0447\u043a\u0430\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041a\u044a\u043c \u0437\u0430\u0432\u044a\u0440\u0448\u0432\u0430\u043d\u0435\u201c button",
+				"expected_result": "The checkout page is loaded",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert info about customer",
+				"expected_result": "Fields are filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \u201c\u041d\u0430\u043f\u0440\u0435\u0434\u201c button",
+				"expected_result": "Page about pay information is loaded",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click \u201c\u041d\u0430\u043b\u043e\u0436\u0435\u043d \u043f\u043b\u0430\u0442\u0435\u0436\u201c",
+				"expected_result": "Fields are checked",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Check all required fields",
+				"expected_result": "Fields are checked",
+				"data": ""
+			}, {
+				"position": 6,
+				"action": "Click \u201c\u0417\u0430\u0432\u044a\u0440\u0448\u0438 \u043f\u043e\u0440\u044a\u0447\u043a\u0430\u0442\u0430\u201c",
+				"expected_result": "The user is notified about the order is confirmed",
+				"data": ""
+			}]
+		}, {
+			"id": 213,
+			"title": "Add product in cart",
+			"description": "Test that registered and logged users can add products to the cart",
+			"preconditions": "User has to be registered already\n\n1. Go to https://teodor.bg/\n2. Click the \u201cH8S\u201c button",
+			"postconditions": null,
+			"priority": "high",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0414\u043e\u0431\u0430\u0432\u0438\u201c button of the first product from the list",
+				"expected_result": "Page of this product is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Choose color \u201c\u0411\u044f\u043b\u201c",
+				"expected_result": "Color is checked",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on size \u201cL\u201c",
+				"expected_result": "Size is checked",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click \u201c\u0414\u043e\u0431\u0430\u0432\u0438 \u0432 \u043f\u043e\u0440\u044a\u0447\u043a\u0430\u201c button",
+				"expected_result": "Product is added to cart",
+				"data": ""
+			}]
+		}]
+	}, {
+		"id": 5,
+		"title": "Footer",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 89,
+			"title": "Open all hyper links in \"\u0417\u0410 \u041a\u041b\u0418\u0415\u041d\u0422\u0410\" menu",
+			"description": "Footer and more precisely field For customer",
+			"preconditions": "1.Go to https://teodor.bg/ \n2.Scroll down to footer",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Go to \"\u0417\u0410 \u041a\u041b\u0418\u0415\u041d\u0422\u0410\" menu",
+				"expected_result": "",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click all buttons from fields ''\u0417\u0410 \u041a\u041b\u0418\u0415\u041d\u0422\u0410''",
+				"expected_result": "Page \u201c\u041e\u0431\u0449\u0438 \u0443\u0441\u043b\u043e\u0432\u0438\u044f\u201c , ''[\u0422\u0430\u0431\u043b\u0438\u0446\u0430 \u0441 \u0440\u0430\u0437\u043c\u0435\u0440\u0438](https://teodor.bg/tablitsa-s-razmeri)'' , ''\u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430 \u0438 \u043f\u043b\u0430\u0449\u0430\u043d\u0435'' , ''\u0427\u0435\u0441\u0442\u043e \u0437\u0430\u0434\u0430\u0432\u0430\u043d\u0438 \u0432\u044a\u043f\u0440\u043e\u0441\u0438'' , ''\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u0437\u0430 \u043f\u043e\u0432\u0435\u0440\u0438\u0442\u0435\u043b\u043d\u043e\u0441\u0442 \u0438 \u0437\u0430 \u0431\u0438\u0441\u043a\u0432\u0438\u0442\u043a\u0438\u0442\u0435'' , ''\u041b\u0438\u0447\u043d\u0438 \u0434\u0430\u043d\u043d\u0438 - \u043d\u0430\u043a\u0440\u0430\u0442\u043a\u043e'' , ''\u041e\u043d\u043b\u0430\u0439\u043d \u0440\u0435\u0448\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0441\u043f\u043e\u0440\u043e\u0432\u0435'' is loaded successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 95,
+			"title": "Open all hyper links in \"\u041f\u0420\u041e\u0414\u0423\u041a\u0422\u0418\" menu",
+			"description": "Footer and more precisely field Products",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Scroll down to footer",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Go to \"\u041f\u0420\u041e\u0414\u0423\u041a\u0422\u0418\" menu",
+				"expected_result": "",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click all buttons from fields \"\u041f\u0420\u041e\u0414\u0423\u041a\u0422\u0418\"",
+				"expected_result": "Page ''\u041a\u043e\u0441\u0442\u044e\u043c\u0438'' , ''\u0421\u0430\u043a\u0430'' , ''\u0415\u043b\u0435\u0446\u0438'' , ''\u0420\u0438\u0437\u0438'' , ''\u041f\u0430\u043d\u0442\u0430\u043b\u043e\u043d\u0438'' , ''\u0414\u044a\u043d\u043a\u0438'' , ''\u041e\u0431\u0443\u0432\u043a\u0438'' , ''\u0422\u0435\u043d\u0438\u0441\u043a\u0438'' , ''\u0411\u043b\u0443\u0437\u0438'' , ''\u0415\u043a\u0438\u043f\u0438 \u0438 \u0441\u0443\u0438\u0442\u0448\u044a\u0440\u0442\u0438'' , ''\u041f\u0443\u043b\u043e\u0432\u0435\u0440\u0438'' , ''\u0416\u0438\u043b\u0435\u0442\u043a\u0438'' , ''\u042f\u043a\u0435\u0442\u0430'' , ''\u041f\u0430\u043b\u0442\u0430'' , ''\u0411\u0435\u0440\u043c\u0443\u0434\u0438'' , ''\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438'' is loaded successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 111,
+			"title": "Open all hyper links in \"\u0417\u0410 TEODOR\" menu",
+			"description": "Footer and more precisely field \"\u0417\u0410 TEODOR\"",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Scroll down to footer",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Go to \"\u0417\u0410 TEODOR\" menu",
+				"expected_result": "",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click all buttons from fields \"\u0417\u0410 TEODOR\"",
+				"expected_result": "Page ''\u041a\u043e\u043b\u0435\u043a\u0446\u0438\u044f: \u041f\u0440\u043e\u043b\u0435\u0442/\u041b\u044f\u0442\u043e 2021'' , ''\u0417\u0430 \u043d\u0430\u0441'' , ''\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438'' , ''\u0411\u043b\u043e\u0433'' , ''\u0412\u0438\u0434\u0435\u043e'' , ''\u0412\u0430\u0443\u0447\u0435\u0440\u0438 \u0437\u0430 \u043f\u043e\u0434\u0430\u0440\u044a\u043a'' , ''\u041a\u0430\u0440\u0442\u0438 \u0437\u0430 \u043b\u043e\u044f\u043b\u043d\u043e\u0441\u0442'' , ''\u041a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u0438 \u043a\u043b\u0438\u0435\u043d\u0442\u0438'' , ''\u041a\u0430\u0440\u0438\u0435\u0440\u0438'' , ''\u041a\u0430\u0440\u0442\u0430 \u043d\u0430 \u0441\u0430\u0439\u0442\u0430'' , ''\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u0438'' is loaded successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 122,
+			"title": "Open all hyper links in \"\u041f\u041e\u0421\u041b\u0415\u0414\u041d\u041e\" menu",
+			"description": "Footer and more precisely field for the latest trends",
+			"preconditions": "1.Go to https://teodor.bg/\n2.Scroll down to footer",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Go to \"\u041f\u041e\u0421\u041b\u0415\u0414\u041d\u041e\" menu",
+				"expected_result": "",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click all buttons from fields \"\u041f\u041e\u0421\u041b\u0415\u0414\u041d\u041e\"",
+				"expected_result": "Page [5 \u0438\u0434\u0435\u0438 \u0437\u0430 \u0432\u0438\u0437\u0438\u044f \u0441 \u043c\u044a\u0436\u043a\u0430 \u0442\u0435\u043d\u0438\u0441\u043a\u0430 \u0441\u043f\u0440\u044f\u043c\u043e \u043c\u043e\u0434\u043d\u0438\u0442\u0435 \u0442\u0435\u043d\u0434\u0435\u043d\u0446\u0438\u0438](https://teodor.bg/novini/5-idei-za-viziya-s-mazhka-teniska-spryamo-modnite-tendentsii) , [\u041a\u043e\u0438 \u0441\u0430 \u043c\u043e\u0434\u0435\u0440\u043d\u0438\u0442\u0435 \u0446\u0432\u0435\u0442\u043e\u0432\u0435 \u043f\u0440\u0438 \u043c\u044a\u0436\u043a\u0438\u0442\u0435 \u0431\u043b\u0443\u0437\u0438 \u0437\u0430 2020 \u0438 \u043a\u0430\u043a \u0434\u0430 \u0433\u0438 \u0441\u044a\u0447\u0435\u0442\u0430\u0435\u0442\u0435](https://teodor.bg/novini/koi-sa-modernite-cvetove-pri-m-zhkite-bluzi-za-2020-i-kak-da-gi-s-chetaete) , [\u041a\u043e\u0438 \u0441\u0430 \u043f\u0440\u0435\u0434\u043f\u043e\u0447\u0438\u0442\u0430\u043d\u0438\u0442\u0435 \u0442\u0438\u043f\u043e\u0432\u0435 \u043f\u0440\u043e\u043b\u0435\u0442\u043d\u0438 \u043c\u044a\u0436\u043a\u0438 \u044f\u043a\u0435\u0442\u0430](https://teodor.bg/novini/koi-sa-predpochitanite-tipove-proletni-m-zhki-jaketa) , [\u041a\u0430\u043a \u0434\u0430 \u0438\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043c\u044a\u0436\u043a\u0438 \u043a\u044a\u0441\u0438 \u043f\u0430\u043d\u0442\u0430\u043b\u043e\u043d\u0438 \u0437\u0430 \u043f\u0440\u043e\u043b\u0435\u0442\u043d\u043e-\u043b\u0435\u0442\u043d\u0438\u044f \u0441\u0435\u0437\u043e\u043d](https://teodor.bg/novini/kak-da-izberete-m-zhki-k-si-pantaloni-za-proletno-letnija-sezon) , [\u0418\u0434\u0435\u0438 \u0437\u0430 \u043f\u0440\u043e\u043b\u0435\u0442\u043d\u0438 \u043c\u044a\u0436\u043a\u0438 \u0432\u0438\u0437\u0438\u0438 \u0441 \u0440\u0438\u0437\u0438 \u0441 \u043a\u044a\u0441 \u0440\u044a\u043a\u0430\u0432](https://teodor.bg/novini/idei-za-proletni-m-zhki-vizii-s-rizi-s-k-s-r-kav) , [\u041c\u043e\u0434\u0430 \u043f\u0440\u0438 \u043c\u044a\u0436\u043a\u0438\u0442\u0435 \u0434\u0440\u0435\u0445\u0438 \u0437\u0430 \u043f\u0440\u043e\u043b\u0435\u0442\u043d\u043e-\u043b\u0435\u0442\u043d\u0438\u044f \u0441\u0435\u0437\u043e\u043d 2020](https://teodor.bg/novini/moda-pri-m-zhkite-drehi-za-proletno-letnija-sezon-2020) , [\u041a\u043e\u0436\u0435\u043d\u043e\u0442\u043e \u044f\u043a\u0435 \u2014 \u0434\u0440\u0435\u0445\u0430\u0442\u0430, \u043a\u043e\u044f\u0442\u043e \u0437\u0430\u0441\u0438\u043b\u0432\u0430 \u043c\u044a\u0436\u043a\u043e\u0442\u043e \u0438\u0437\u043b\u044a\u0447\u0432\u0430\u043d\u0435](https://teodor.bg/novini/kozhenoto-jake-drehata-kojato-zasilva-m-zhkoto-izl-chvane) is loaded successfully",
+				"data": ""
+			}]
+		}]
+	}, {
+		"id": 6,
+		"title": "Articles",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 137,
+			"title": "New articles are visible",
+			"description": "User can see newest articles in blog page",
+			"preconditions": "1.Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u0411\u043b\u043e\u0433\u201c from the main page",
+				"expected_result": "Page \u201c\u0411\u043b\u043e\u0433\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \u201c\u041d\u0430\u0439 - \u043d\u043e\u0432\u0438\u201c",
+				"expected_result": "The newest article is first",
+				"data": ""
+			}]
+		}, {
+			"id": 139,
+			"title": "Information of article",
+			"description": "The user can open a given atricle from the \"Look more\" button",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u0411\u043b\u043e\u0433\u201c from main page",
+				"expected_result": "Page \u201c\u0411\u043b\u043e\u0433\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \u201c\u0412\u0438\u0436 \u043f\u043e\u0432\u0435\u0447\u0435\u201c of the first article",
+				"expected_result": "Page of first article is loaded successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 138,
+			"title": "Popular articles are visible",
+			"description": "User can see the most popular articles in blog page",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u0411\u043b\u043e\u0433\u201c from the main page",
+				"expected_result": "Page \u201c\u0411\u043b\u043e\u0433\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \u201c\u041f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u0438\u201c",
+				"expected_result": "The most popular articles is first",
+				"data": ""
+			}]
+		}, {
+			"id": 140,
+			"title": "Back to all articles",
+			"description": "User can go back to the list with all articles",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u0411\u043b\u043e\u0433\u201c from the main page",
+				"expected_result": "Page \u201c\u0411\u043b\u043e\u0433\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \u201c\u0412\u0438\u0436 \u043f\u043e\u0432\u0435\u0447\u0435\u201c of the first article",
+				"expected_result": "Page of first article is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the button \u201c\u0421\u0442\u0430\u0442\u0438\u0438\u201c",
+				"expected_result": "Page \u201c\u0421\u0442\u0430\u0442\u0438\u0438\u201c is loaded successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 141,
+			"title": "Change the default number of the showed articles",
+			"description": null,
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u0411\u043b\u043e\u0433\u201c from the main page",
+				"expected_result": "Page \u201c\u0411\u043b\u043e\u0433\u201c is loaded succesfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \u201c\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u043e 12\u201c",
+				"expected_result": "Shows count of results with the selected option \u201c\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u043e 12\u201c",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the button \u201c\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u043e 22\u201c",
+				"expected_result": "Shows count of results with the selected option \u201c\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u043e 22\u201c",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the button \u201c\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u043e 52\u201c",
+				"expected_result": "Shows count of results with the selected option \u201c\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u043e 52\u201c",
+				"data": ""
+			}]
+		}, {
+			"id": 144,
+			"title": "Search articles by keyword",
+			"description": "User can search articles by keyword",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u0411\u043b\u043e\u0433\u201c from the main page",
+				"expected_result": "Page \u201c\u0411\u043b\u043e\u0433\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert keyword in the search field of the Blog page",
+				"expected_result": "There are articles connected with the keyword",
+				"data": "\u0421\u0430\u043a\u043e"
+			}]
+		}]
+	}, {
+		"id": 7,
+		"title": "Product",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 145,
+			"title": "Switch colors on given products - \u041a\u041e\u0421\u0422\u042e\u041c\u0418",
+			"description": "Users can choose different colors of the products while choosing the right one",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button ''\u041e\u0431\u043b\u0435\u043a\u043b\u043e\"",
+				"expected_result": "Page is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Open \" \u0422\u042a\u041c\u041d\u041e \u0421\u0418\u041d \u041a\u041e\u0421\u0422\u042e\u041c \u0412 \u0417\u042a\u0420\u041d\u0415\u0421\u0422\u0410 \u0421\u0422\u0420\u0423\u041a\u0422\u0423\u0420\u0410 ''",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click color ''\u0421\u0438\u043d''",
+				"expected_result": "The screen is the same product but in blue color",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click color ''\u0422\u044a\u043c\u043d\u043e \u0441\u0438\u043d''",
+				"expected_result": "The screen is the same product but in dark blue color",
+				"data": ""
+			}]
+		}, {
+			"id": 146,
+			"title": "Switch colors on given products - \u041e\u0431\u0443\u0432\u043a\u0438",
+			"description": "User can choose different colors of the products while choose the right one",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u041e\u0431\u0443\u0432\u043a\u0438\u201c",
+				"expected_result": "Page \u201c\u041e\u0431\u0443\u0432\u043a\u0438\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Open ''[\u041a\u0410\u0424\u042f\u0412\u0418 \u041c\u041e\u041a\u0410\u0421\u0418\u041d\u0418 \u041e\u0422 \u041d\u0410\u0411\u0423\u041a](https://teodor.bg/product-180122171779-4)''",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click color \u201c\u0427\u0435\u0440\u0432\u0435\u043d\u201c",
+				"expected_result": "The screen is the same product but in red color",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click color \"\u0427\u0435\u0440\u0435\u043d\"",
+				"expected_result": "The screen is the same product but in black color",
+				"data": ""
+			}]
+		}, {
+			"id": 147,
+			"title": "Switch colors on given products - \u041a\u043e\u043b\u0430\u043d\u0438",
+			"description": "User can choose different colors of the products white choose the right one",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\u201c",
+				"expected_result": "Page \u201c\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Open ''[\u0422\u042a\u041c\u041d\u041e \u0421\u0418\u041d \u041a\u041e\u041b\u0410\u041d \u041e\u0422 \u0413\u041b\u0410\u0414\u041a\u0410 \u041a\u041e\u0416\u0410](https://teodor.bg/t-mno-sin-kolan-ot-gladka-kozha-200110131435-1)''",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click color ''\u0427\u0435\u0440\u0435\u043d''",
+				"expected_result": "The screen is the same product but in black color",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click color \"\u0421\u0438\u043d\"",
+				"expected_result": "The screen is the same product but is blue color",
+				"data": ""
+			}]
+		}, {
+			"id": 148,
+			"title": "Share product on Facebook",
+			"description": "User can share product page in social web Facebook",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the button \"\u041e\u0431\u0443\u0432\u043a\u0438\"",
+				"expected_result": "Dropdown menu \"\u041e\u0431\u0443\u0432\u043a\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button ''\u0411\u043e\u0442\u0438\"",
+				"expected_result": "Page ''\u0411\u043e\u0442\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the product \"\u041a\u0410\u0424\u042f\u0412\u0418 \u041a\u041e\u0416\u0415\u041d\u0418 \u0411\u041e\u0422\u0418 \u0421 \u0412\u0420\u042a\u0417\u041a\u0418\"",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the button \u201c\u0421\u043f\u043e\u0434\u0435\u043b\u0438\u201c",
+				"expected_result": "Options for share are visible",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Click the button \u201cFacebook\u201c",
+				"expected_result": "New window is open with ready post for sharing in Facebook",
+				"data": ""
+			}]
+		}, {
+			"id": 149,
+			"title": "Share product on Pinterest",
+			"description": "User can share product page in social web like Pinterest",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the button \"\u041e\u0431\u0443\u0432\u043a\u0438\"",
+				"expected_result": "Dropdown menu \"\u041e\u0431\u0443\u0432\u043a\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button ''\u0411\u043e\u0442\u0438\"",
+				"expected_result": "Page ''\u0411\u043e\u0442\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the product \"\u041a\u0410\u0424\u042f\u0412\u0418 \u041a\u041e\u0416\u0415\u041d\u0418 \u0411\u041e\u0422\u0418 \u0421 \u0412\u0420\u042a\u0417\u041a\u0418\"",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the button \u201c\u0421\u043f\u043e\u0434\u0435\u043b\u0438\u201c",
+				"expected_result": "Options for share are visible",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Click the button \"Pinterest\"",
+				"expected_result": "New window is open with ready post for sharing in Pinterest",
+				"data": ""
+			}]
+		}, {
+			"id": 150,
+			"title": "Share product on LinkedIn",
+			"description": "User can share product page in social web like LinkedIn",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the button \"\u041e\u0431\u0443\u0432\u043a\u0438\"",
+				"expected_result": "Dropdown menu \"\u041e\u0431\u0443\u0432\u043a\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button ''\u0411\u043e\u0442\u0438\"",
+				"expected_result": "Page ''\u0411\u043e\u0442\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the product \"\u041a\u0410\u0424\u042f\u0412\u0418 \u041a\u041e\u0416\u0415\u041d\u0418 \u0411\u041e\u0422\u0418 \u0421 \u0412\u0420\u042a\u0417\u041a\u0418\"",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the button \u201c\u0421\u043f\u043e\u0434\u0435\u043b\u0438\u201c",
+				"expected_result": "Options for share are visible",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Click the button \"LinkedIn\"",
+				"expected_result": "New window is open with ready post for sharing in LinkedIn",
+				"data": ""
+			}]
+		}, {
+			"id": 151,
+			"title": "Share product on Twitter",
+			"description": "User can share product page in social web like Twitter",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the button \"\u041e\u0431\u0443\u0432\u043a\u0438\"",
+				"expected_result": "Dropdown menu \"\u041e\u0431\u0443\u0432\u043a\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button ''\u0411\u043e\u0442\u0438\"",
+				"expected_result": "Page ''\u0411\u043e\u0442\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the product \"\u041a\u0410\u0424\u042f\u0412\u0418 \u041a\u041e\u0416\u0415\u041d\u0418 \u0411\u041e\u0422\u0418 \u0421 \u0412\u0420\u042a\u0417\u041a\u0418\"",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the button \u201c\u0421\u043f\u043e\u0434\u0435\u043b\u0438\u201c",
+				"expected_result": "Options for share are visible",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Click the button \u201cTwitter\u201c",
+				"expected_result": "New window is open with ready post for sharing in Twitter",
+				"data": ""
+			}]
+		}, {
+			"id": 187,
+			"title": "Share the list with favorites products",
+			"description": "Registered and logged users can share via Email the list of favorites products",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click Account button\n3. Insert valid data for user\n4. Click \u201c\u0412\u0445\u043e\u0434''\n5. There are products in favorites",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c button",
+				"expected_result": "Page \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c is loaded",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click \u201c\u0421\u043f\u043e\u0434\u0435\u043b\u0438 \u0441\u043f\u0438\u0441\u044a\u043a \u0441 \u0436\u0435\u043b\u0430\u043d\u0438 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u201c button",
+				"expected_result": "A page for sharing the list is loaded",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Insert Email in the field for mails",
+				"expected_result": "Field is filled",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the \u201c\u0421\u043f\u043e\u0434\u0435\u043b\u0438 \u0441\u043f\u0438\u0441\u044a\u043a \u0441 \u0436\u0435\u043b\u0430\u043d\u0438 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u201c",
+				"expected_result": "The list is shared successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 152,
+			"title": "Info about product - \u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+			"description": "User can see more info about product description",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Hover the button \"\u0410\u041a\u0421\u0415\u0421\u041e\u0410\u0420\u0418\"",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the button \u201c\u041a\u043e\u043b\u0430\u043d\u201c",
+				"expected_result": "Page \u201c\u041a\u043e\u043b\u0430\u043d\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Open \"\u0422\u042a\u041c\u041d\u041e \u0421\u0418\u041d \u041a\u041e\u041b\u0410\u041d \u041e\u0422 \u0413\u041b\u0410\u0414\u041a\u0410 \u041a\u041e\u0416\u0410\"",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the button \"+\" of the field \u201c\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435\"",
+				"expected_result": "There is more information about product",
+				"data": ""
+			}]
+		}, {
+			"id": 153,
+			"title": "Info about product - \u0422\u044a\u043a\u0430\u043d",
+			"description": "User can see more info about product - \u0442\u044a\u043a\u0430\u043d/\u043f\u043e\u0434\u0434\u0440\u044a\u0436\u043a\u0430",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the button \u201c\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\u201c",
+				"expected_result": "Dropdown menu \u201c\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\u201c is loade d successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \"\u041a\u043e\u043b\u0430\u043d\u0438\"",
+				"expected_result": "Page \"\u041a\u043e\u043b\u0430\u043d\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \"\u0422\u042a\u041c\u041d\u041e \u0421\u0418\u041d \u041a\u041e\u041b\u0410\u041d \u041e\u0422 \u0413\u041b\u0410\u0414\u041a\u0410 \u041a\u041e\u0416\u0410\"",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the \u201c+\u201c button of \u201c\u0422\u044a\u043a\u0430\u043d/\u041f\u043e \u0434\u0434\u0440\u044a\u0436\u043a\u0430\u201c field",
+				"expected_result": "There is more information about product\u2019s fabric",
+				"data": ""
+			}]
+		}, {
+			"id": 154,
+			"title": "Info about product - \u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430",
+			"description": "User can see more info about product - \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0430",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "other",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the \u201c\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\u201c button",
+				"expected_result": "Dropdown menu \u201c\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\u201c is loade d successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button \"\u041a\u043e\u043b\u0430\u043d\u0438\"",
+				"expected_result": "Page \"\u041a\u043e\u043b\u0430\u043d\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Open \"\u0422\u042a\u041c\u041d\u041e \u0421\u0418\u041d \u041a\u041e\u041b\u0410\u041d \u041e\u0422 \u0413\u041b\u0410\u0414\u041a\u0410 \u041a\u041e\u0416\u0410\"",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the button \u201c+\u201c of \u201c\u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430\u201c field",
+				"expected_result": "There us more information about product's delivery",
+				"data": ""
+			}]
+		}, {
+			"id": 155,
+			"title": "Info about product - \u0423\u0441\u043b\u043e\u0432\u0438\u044f \u0437\u0430 \u0432\u0440\u044a\u0449\u0430\u043d\u0435",
+			"description": "User can see more info about product - \u0423\u0441\u043b\u043e\u0432\u0438\u044f \u0437\u0430 \u0432\u0440\u044a\u0449\u0430\u043d\u0435",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the button \"\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\"",
+				"expected_result": "Dropdown menu \"\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\" is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button ''\u041a\u043e\u043b\u0430\u043d\u0438''",
+				"expected_result": "Page ''\u041a\u043e\u043b\u0430\u043d\u0438'' is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Open ''\u0422\u042a\u041c\u041d\u041e \u0421\u0418\u041d \u041a\u041e\u041b\u0410\u041d \u041e\u0422 \u0413\u041b\u0410\u0414\u041a\u0410 \u041a\u041e\u0416\u0410''",
+				"expected_result": "Page of product is loaded",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the button \u201c+\u201c of \u201c\u0423\u0441\u043b\u043e\u0432\u0438\u044f \u0437\u0430 \u0432\u0440\u044a\u0449\u0430\u043d\u0435\u201c field",
+				"expected_result": "There is more information about product\u2019s return conditions",
+				"data": ""
+			}]
+		}, {
+			"id": 167,
+			"title": "Sort products by rising price",
+			"description": "User can sort the product by rising price",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. The user is in \"<span>\u00a0</span>[O\u0411\u041b\u0415\u041a\u041b\u041e]() <span>\" \u00a0</span>",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the \u201c\u0421\u043e\u0440\u0442\u0438\u0440\u0430\u0439 \u043f\u043e \u0426\u0435\u043d\u0430 (\u0412\u044a\u0437\u0445\u043e\u0434\u044f\u0449 \u0440\u0435\u0434)\u201d",
+				"expected_result": "The product with lowest price is first in list with products",
+				"data": ""
+			}]
+		}, {
+			"id": 168,
+			"title": "Sort products by descending price",
+			"description": "User can sort products by descending price",
+			"preconditions": "1\\. Go to https://teodor\\.bg/ 2\\. User is in '' <span>\u00a0</span>[O\u0411\u041b\u0415\u041a\u041b\u041e]() ''",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the \u201c\u0421\u043e\u0440\u0442\u0438\u0440\u0430\u0439 \u043f\u043e \u0426\u0435\u043d\u0430 (\u0412 \u044a\u0437\u0445\u043e\u0434\u044f\u0449 \u0440\u0435\u0434)\u201d",
+				"expected_result": "The product with lowest price is first in list with products",
+				"data": ""
+			}]
+		}, {
+			"id": 169,
+			"title": "Sort products by descending name",
+			"description": "User can sort the product by descending name",
+			"preconditions": "1\\. Go to https://teodor\\.bg/ 2\\. User is in ''\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\"",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the \u201d\u0421\u043e\u0440\u0442\u0438\u0440\u0430\u0439 \u043f\u043e \u0418\u043c\u0435 (\u041d\u0438\u0437\u0445\u043e\u0434\u044f\u0449 \u0440\u0435\u0434)\u201d",
+				"expected_result": "The products is in reverse alphabetical order",
+				"data": ""
+			}]
+		}, {
+			"id": 170,
+			"title": "Sort products by ascending name",
+			"description": "User can sort the product by ascending name",
+			"preconditions": "1\\. Go to : https://teodor\\.bg/ 2\\. User is in \" [\u0410\u041a\u0421\u0415\u0421\u041e\u0410\u0420\u0418](https://teodor.bg/aksesoari) \u201c page",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the \u201d\u0421\u043e\u0440\u0442\u0438\u0440\u0430\u0439 \u043f\u043e \u0418\u043c\u0435 (\u0412\u044a\u0437\u0445\u043e\u0434\u044f\u0449 \u0440\u0435\u0434)\u201d",
+				"expected_result": "The products is in alphabetical order",
+				"data": ""
+			}]
+		}, {
+			"id": 171,
+			"title": "Sort products by ascending Position",
+			"description": "Test that, user can sort the products by ascending position",
+			"preconditions": "1. Go to https://teodor.bg/ \n2. User is in '' [\u0410\u041a\u0421\u0415\u0421\u041e\u0410\u0420\u0418](https://teodor.bg/aksesoari) ''",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the \u201d\u0421\u043e\u0440\u0442\u0438\u0440\u0430\u0439 \u043f\u043e \u041f\u043e\u0437\u0438\u0446\u0438 \u044f (\u0412\u044a\u0437\u0445\u043e\u0434\u044f\u0449 \u0440\u0435\u0434)\u201d",
+				"expected_result": "The products are in sort by ascending position",
+				"data": ""
+			}]
+		}, {
+			"id": 179,
+			"title": "Sort products by discount",
+			"description": "Confirm that the user can sort the products by discount",
+			"preconditions": "1. Go to https://teodor.bg/\n2. The user is in the section \u201c\u0421\u0430\u043a\u0430\u201c",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "other",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the sorting drop-down menu",
+				"expected_result": "It appears a list with different results",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the \u201d\u0421\u043e\u0440\u0442\u0438\u0440\u0430\u0439 \u043f\u043e % \u041e\u0442\u0441\u0442\u044a\u043f\u043a\u0430\u201d",
+				"expected_result": "The first visible products are with the biggest discount",
+				"data": ""
+			}]
+		}, {
+			"id": 180,
+			"title": "Sort products by the Newest",
+			"description": "Test that, user can sort the products by the Newest",
+			"preconditions": "1. Go to https://teodor.bg/\n2. The user is in the section \u201c\u0421\u0430\u043a\u0430\u201c",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the \u201d\u041d\u0430\u0439-\u043d\u043e\u0432\u0438\u201d",
+				"expected_result": "The first visible products are the newest",
+				"data": ""
+			}]
+		}, {
+			"id": 181,
+			"title": "Sort products by Count of grades",
+			"description": "Test that, user can sort the products by the count of grades",
+			"preconditions": "1. Go to https://teodor.bg/\n2. The user is in the section \u201c\u0421\u0430\u043a\u0430\u201c",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "other",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the \u201d\u0411\u0440\u043e\u0439 \u043e\u0446\u0435\u043d\u043a\u0438''",
+				"expected_result": "The products are in sort by the count of grades",
+				"data": ""
+			}]
+		}, {
+			"id": 182,
+			"title": "Sort products by Bestsellers",
+			"description": "Test that, user can sort the products by Bestsellers",
+			"preconditions": "1. Go to https://teodor.bg/\n2. The user is in the section \u201c\u0421\u0430\u043a\u0430\u201c",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the ''Bestsellers''",
+				"expected_result": "The products are in sort by Bestsellers",
+				"data": ""
+			}]
+		}, {
+			"id": 172,
+			"title": "Cards for loyal customers",
+			"description": "Test that the page cards for loyal customers loaded correctly",
+			"preconditions": "Go to : https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the \u201c\u0417\u0430 \u043a\u043b\u0438\u0435\u043d\u0442\u0438\u201c button",
+				"expected_result": "The drop-down menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \u201c\u041a\u0430\u0440\u0442\u0438 \u0437\u0430 \u043b\u043e\u044f\u043b\u043d\u0438 \u043a\u043b\u0438\u0435\u043d\u0442\u0438\u201c button",
+				"expected_result": "There is all information about this card",
+				"data": ""
+			}]
+		}, {
+			"id": 173,
+			"title": "Corporate customer",
+			"description": "Test that the page corporate customer is loaded correctly",
+			"preconditions": "Go to : https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the \u201c\u0417\u0430 \u043a\u043b\u0438\u0435\u043d\u0442\u0438\u201c button",
+				"expected_result": "The drop-down menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \u201c\u041a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u0438 \u043a\u043b\u0438\u0435\u043d\u0442\u0438\u201c button",
+				"expected_result": "There is all information about th\u0435s\u0435 customer",
+				"data": ""
+			}]
+		}, {
+			"id": 174,
+			"title": "Cash for overall vision",
+			"description": "Test that the page overall vision is loaded correctly",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the \"[\u0417\u0410 \u041a\u041b\u0418\u0415\u041d\u0422\u0418](https://teodor.bg/korporativni-klienti)\" button",
+				"expected_result": "The drop-down menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \"\u0426\u044f\u043b\u043e\u0441\u0442\u043d\u0430 \u0432\u0438\u0437\u0438\u044f\" button",
+				"expected_result": "There is all information about th\u0435s\u0435 customers",
+				"data": ""
+			}]
+		}, {
+			"id": 175,
+			"title": "Links redirected to the product page",
+			"description": "Test that the user will be redirected to the product page from links under the photo",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Hover the \u201c\u041a\u0430\u0442\u0430\u043b\u043e\u0433\u201c button",
+				"expected_result": "The drop-down menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click \u201c\u041f\u0440\u043e\u043b\u0435\u0442/\u041b\u044f\u0442\u043e 2021\u201c button",
+				"expected_result": "Page of the catalogue is loaded",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the first link under the first page",
+				"expected_result": "The product is the same as the photo in the catalog",
+				"data": ""
+			}]
+		}, {
+			"id": 178,
+			"title": "User can chat with bot",
+			"description": "Test that user can us\u0435 chat functionality",
+			"preconditions": "1.Go to https://teodor.bg/\n2.User is logged",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click Messenger icon",
+				"expected_result": "Chat is opened",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert message \u201c\u0417\u0434\u0440\u0430\u0432\u0435\u0439\u0442\u0435 , \u0431\u0438\u0445\u0442\u0435 \u043b\u0438 ... \u201c",
+				"expected_result": "Bot answer correctly of the message",
+				"data": ""
+			}]
+		}, {
+			"id": 185,
+			"title": "Update the list of favorites products",
+			"description": "Test that registered and logged users can update products in the favorites list",
+			"preconditions": "1. Go to https://teodor.bg/\n2. The user must be logged",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c button",
+				"expected_result": "Page \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c is loaded",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click \u201c\u0410\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0441\u043f\u0438\u0441\u044a\u043a\u0430 \u0441 \u0436\u0435\u043b\u0430\u043d\u0438 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u201c button",
+				"expected_result": "",
+				"data": ""
+			}]
+		}, {
+			"id": 186,
+			"title": "Add products to cart from favorites page",
+			"description": "Test that registered and logged users can add products from the favorites page",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click Account button\n3. Insert valid data for the user\n4. Click \u201c\u0412\u0445\u043e\u0434\u201c\n5. There are products in favorites",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "undefined",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c button",
+				"expected_result": "Page \u201c\u041b\u044e\u0431\u0438\u043c\u0438\u201c is loaded",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click \u201c\u0414\u043e\u0431\u0430\u0432\u0438 \u0432\u0441\u0438\u0447\u043a\u0438 \u043a\u044a\u043c \u043a\u043e\u043b\u0438\u0447\u043a \u0430\u0442\u0430\u201c button",
+				"expected_result": "The products are in the cart",
+				"data": ""
+			}]
+		}, {
+			"id": 198,
+			"title": "Discount with valid promo code",
+			"description": "Test that guests can add more discounts after adding a valid promo code",
+			"preconditions": "1. Go to https://teodor.bg/\n2. There is some product in the cart\n3. Click the \u201c\u041a\u043e\u043b\u0438\u0447\u043a\u0430\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "other",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201d\u0410\u043a\u043e \u0438\u043c\u0430\u0442\u0435 \u043f\u0440\u043e\u043c\u043e \u043a\u043e\u0434, \u0432\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0433\u043e \u0442\u0443\u043a\u201d button",
+				"expected_result": "The field for promo code is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Insert valid promo code",
+				"expected_result": "Field is filled",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \u201c\u041f\u0440\u0438\u043b\u043e\u0436\u0438\u201c button",
+				"expected_result": "There is more discount in the order",
+				"data": ""
+			}]
+		}, {
+			"id": 199,
+			"title": "Open product page from cart page",
+			"description": "Test that the user can be redirected to the product page after clicking over the product",
+			"preconditions": "1. Go to https://teodor.bg/\n2. In the cart is added some product",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201cCart\u201c button from the header",
+				"expected_result": "Page \u201cCart\u201c is loaded",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the name of the product",
+				"expected_result": "Page of the product is loaded",
+				"data": ""
+			}]
+		}, {
+			"id": 201,
+			"title": "Free delivery after order over 99,99 lv",
+			"description": "Test that the delivery will be free for customers if the order is over 99,99 lv",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click the \u201c\u0410\u043a\u0441\u0435\u0441\u043e\u0430\u0440\u0438\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "other",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438\u201c button",
+				"expected_result": "The Drop-down Menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \u201c\u0427\u0430\u043d\u0442\u0438 \u0438 \u0420\u0430\u043d\u0438\u0446\u0438\u201c button",
+				"expected_result": "Page \u201d\u0427\u0430\u043d\u0442\u0438\u201d is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \u201c\u0414\u043e\u0431\u0430\u0432\u0438\u201c button of the first product which is over 99,99lv",
+				"expected_result": "Page of product is open",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the \u201c\u041a\u043e\u043b\u0438\u0447\u043a\u0430\u201c button",
+				"expected_result": "There is a message about free delivery",
+				"data": ""
+			}]
+		}, {
+			"id": 208,
+			"title": "Filter products by fabric ''cotton''",
+			"description": "Testing that the user can filter products by fabric",
+			"preconditions": "Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041e\u0431\u043b\u0435\u043a\u043b\u043e\u201c button",
+				"expected_result": "The dropdown menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \u201c\u041f\u0443\u043b\u043e\u0432\u0435\u0440\u0438\u201c button",
+				"expected_result": "Page \u201c\u041f\u0443\u043b\u043e\u0432\u0435\u0440\u0438\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the \u201c\u0422\u044a\u043a\u0430\u043d\u201c filter",
+				"expected_result": "Dropdown menu with all fabrics is visible",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the \u201c\u041f\u0430\u043c\u0443\u043a\u201c button",
+				"expected_result": "All visible products are from cotton fabric",
+				"data": ""
+			}]
+		}, {
+			"id": 209,
+			"title": "Filter products by sieze",
+			"description": "Testing that the user can filter products by size",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Hover to \u201c\u041e\u0431\u043b\u0435\u043a\u043b\u043e\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0421\u0430\u043a\u0430\u201c button",
+				"expected_result": "Page \u201c\u0421\u0430\u043a\u0430\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the \u201c\u0420\u0430\u0437\u043c\u0435\u0440\u201c filter",
+				"expected_result": "Dropdown menu with all sizes is visible",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the size \u201c44''",
+				"expected_result": "All visible products are available with size \u201c44''",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click the size \u201c46''",
+				"expected_result": "All visible products are available with size \u201c46''",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Click the size \u201c48''",
+				"expected_result": "All visible products are available with size \u201c48''",
+				"data": ""
+			}, {
+				"position": 6,
+				"action": "Click the size \u201c50''",
+				"expected_result": "All visible products are available with size \u201c50''",
+				"data": ""
+			}, {
+				"position": 7,
+				"action": "Click the size \u201c52''",
+				"expected_result": "All visible products are available with size \u201c52''",
+				"data": ""
+			}]
+		}, {
+			"id": 210,
+			"title": "Clear all filters",
+			"description": "Testing that the user can clear all filters with one button",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Hover to the \u201c\u041e\u0431\u043b\u0435\u043a\u043b\u043e\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0422\u0435\u043d\u0438\u0441\u043a\u0438\u201c button",
+				"expected_result": "Page \u201c\u0422\u0435\u043d\u0438\u0441\u043a\u0438\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Set minimum price on the price filter",
+				"expected_result": "The minimum price is set",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Set maximum price on the price filter",
+				"expected_result": "The maximum price is set and all visible products are in the correct range",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Set size \"L\"",
+				"expected_result": "All visible products are available in this size",
+				"data": ""
+			}, {
+				"position": 5,
+				"action": "Click the \u201c\u0418\u0437\u0447\u0438\u0441\u0442\u0438 \u0432\u0441\u0438\u0447\u043a\u0438\u201c button",
+				"expected_result": "All filters are clear and products are visible by default",
+				"data": ""
+			}]
+		}, {
+			"id": 211,
+			"title": "Filter products by price",
+			"description": "Testing that the user can filter products between two prices",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Hover to \u201c\u041e\u0431\u043b\u0435\u043a\u043b\u043e\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0422\u0435\u043d\u0438\u0441\u043a\u0438\u201c button",
+				"expected_result": "Page \u201c\u0422\u0435\u043d\u0438\u0441\u043a\u0438\u201c is loaded successfully",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Set minimum price on the price filter",
+				"expected_result": "The minimum price is setted",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Set maximum price on the price filter",
+				"expected_result": "Set maximum price on the price filter",
+				"data": ""
+			}]
+		}]
+	}, {
+		"id": 9,
+		"title": "Video",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 177,
+			"title": "Play the video and its features",
+			"description": "Test that, the user can play video and its features on the Video page",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click the \u201c\u0412\u0438\u0434\u0435\u043e\u201c button",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the video ''\u041a\u041e\u041b\u0415\u041a\u0426\u0418\u042f \u0415\u0421\u0415\u041d-\u0417\u0418\u041c\u0410 2019/2020 - TEODOR''",
+				"expected_result": "Video is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the button ''youtube''",
+				"expected_result": "Video is played",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click on the minute forward ''1:30''",
+				"expected_result": "The function is performing successfully",
+				"data": ""
+			}, {
+				"position": 4,
+				"action": "Click on the minute forward 1:30 then back to 0:30",
+				"expected_result": "The function is performing successfully",
+				"data": ""
+			}]
+		}]
+	}, {
+		"id": 10,
+		"title": "Currency",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 188,
+			"title": "Change currency in EUR",
+			"description": "The user can change the currency on the site on EUR",
+			"preconditions": "1. Go to https://teodor.bg/\n2. The currency on the site is BGN",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click on the \u201cCurrency\u201c button",
+				"expected_result": "The Dropdown Menu is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click the \u201cEUR\u201c button",
+				"expected_result": "All visible currencies are in Euro",
+				"data": ""
+			}]
+		}]
+	}, {
+		"id": 11,
+		"title": "Shops",
+		"description": null,
+		"preconditions": null,
+		"suites": [],
+		"cases": [{
+			"id": 190,
+			"title": "Details for given shop",
+			"description": "The user open page with more information about giving shop",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click the \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c button from the header of the site",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c button from the header of the site",
+				"expected_result": "The list with all cities is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the \u201c\u041f\u043b\u043e\u0432\u0434\u0438\u0432\u201c button",
+				"expected_result": "Click on the \u201c\u041f\u043b\u043e\u0432\u0434\u0438\u0432\u201c button",
+				"data": ""
+			}, {
+				"position": 3,
+				"action": "Click the \u201c\u0412\u0438\u0436\u0442\u0435 \u0434\u0435\u0442\u0430\u0439\u043b\u0438\u201c button of the first shop from a list",
+				"expected_result": "Page of the shop is loaded successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 191,
+			"title": "Choose shop by city ''Plovdiv''",
+			"description": "The user can show shops only in the chosen city",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click the \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c button from the header of the site",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0433\u0440\u0430\u0434\u201c button",
+				"expected_result": "The list with all cities is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the \u201c\u041f\u043b\u043e\u0432\u0434\u0438\u0432\u201c button",
+				"expected_result": "All visible shops are in Plovdiv city",
+				"data": ""
+			}]
+		}, {
+			"id": 192,
+			"title": "Choose shop by city ''Sofia''",
+			"description": "The user can show shops only in the chosen city",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click the \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c button from the header of the site",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0433\u0440\u0430\u0434\u201c button",
+				"expected_result": "Click the \u201c\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0433\u0440\u0430\u0434\u201c button",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the \u201c\u0421\u043e\u0444\u0438\u044f\u201c button",
+				"expected_result": "All visible shops are in Sofia city",
+				"data": ""
+			}]
+		}, {
+			"id": 193,
+			"title": "Choose shop by city ''Varna''",
+			"description": "The user can show shops only in the chosen city",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click the \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c button from the header of the site",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0433\u0440\u0430\u0434\u201c button",
+				"expected_result": "The list with all cities is visible",
+				"data": ""
+			}, {
+				"position": 2,
+				"action": "Click on the \u201c\u0412\u0430\u0440\u043d\u0430\u201c button",
+				"expected_result": "All visible shops are in Varna city",
+				"data": ""
+			}]
+		}, {
+			"id": 194,
+			"title": "Shops page is loaded successfully",
+			"description": "Test that page with information about all shops is loaded after click button \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c",
+			"preconditions": "1. Go to https://teodor.bg/",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "functional",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c button from the header of the site",
+				"expected_result": "Page \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c is loaded successfully",
+				"data": ""
+			}]
+		}, {
+			"id": 195,
+			"title": "Page shops is loaded from Contacts",
+			"description": "The user can open the page with information about all shops after clicking on the link on the contacts page",
+			"preconditions": "1. Go to https://teodor.bg/\n2. Click the \u201c\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u0438\u201c button from header",
+			"postconditions": null,
+			"priority": "medium",
+			"severity": "undefined",
+			"behavior": "positive",
+			"type": "other",
+			"layer": "unknown",
+			"is_flaky": "no",
+			"automation": "is-not-automated",
+			"status": "actual",
+			"milestone": null,
+			"custom_fields": [],
+			"steps": [{
+				"position": 1,
+				"action": "Click the \u201c\u0420\u0430\u0437\u0433\u043b\u0435\u0434\u0430\u0439\u201c button",
+				"expected_result": "Page \u201c\u041c\u0430\u0433\u0430\u0437\u0438\u043d\u0438\u201c is loaded successfully",
+				"data": ""
+			}]
+		}]
+	}]
+}

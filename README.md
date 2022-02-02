@@ -1,1 +1,1 @@
-# Teodor.bg-Tests
+This repository contains testcases for Teodor.bg
